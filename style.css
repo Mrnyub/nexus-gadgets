@@ -10,9 +10,20 @@ header { display: flex; justify-content: space-between; align-items: center; pad
 .yellow-basket { background-color: transparent; color: #FFD700; border: 2px solid #FFD700; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; transition: all 0.3s ease; }
 .yellow-basket:hover { background-color: #FFD700; color: #121212; }
 
-.hero { height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 20px; }
-.hero-content h1 { font-size: 48px; margin-bottom: 20px; }
-.hero-content p { font-size: 18px; max-width: 600px; margin: 0 auto 30px auto; color: #cccccc; line-height: 1.6; }
+/* Hero Section with New Background Image */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    
+    /* The Background Image & Dark Overlay */
+    background: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.95)), url('https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
 
 .btn { padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 0 10px; display: inline-block; cursor: pointer; border: none; }
 .primary-btn { background-color: #ffffff; color: #121212; }
