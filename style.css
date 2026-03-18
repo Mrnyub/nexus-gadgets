@@ -277,3 +277,57 @@ header {
     --color-input-hover: #FFD700;
     --color-input-focus: #FFD700;
 }
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+@media (max-width: 768px) {
+    /* Stack the Header & Navigation */
+    header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Shrink the Hero Text */
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    /* Stack Homepage Buttons */
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        margin: 0;
+    }
+
+    /* Keep Search Bar inside the screen */
+    .search-container input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Stack About Page Cards */
+    .mission-vision {
+        flex-direction: column;
+    }
+
+    /* Stack Contact Page Boxes */
+    .contact-wrapper {
+        flex-direction: column;
+    }
+}
