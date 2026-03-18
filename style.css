@@ -59,3 +59,11 @@ header { display: flex; justify-content: space-between; align-items: center; pad
 .contact-form .form-group { margin-bottom: 20px; }
 .contact-form label { display: block; margin-bottom: 8px; color: #cccccc; }
 .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 12px; background-color: #121212; border: 1px solid #333; border-radius: 5px; color: #ffffff; font-size: 16px; }
+.product-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+}
