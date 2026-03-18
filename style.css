@@ -147,3 +147,52 @@ header {
 .contact-form .form-group { margin-bottom: 20px; }
 .contact-form label { display: block; margin-bottom: 8px; color: #cccccc; text-align: left; }
 .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 12px; background-color: #121212; border: 1px solid #333; border-radius: 5px; color: #ffffff; font-size: 16px; }
+/* =========================================
+   PREMIUM ANIMATIONS & TRANSITIONS
+   ========================================= */
+
+/* 1. Page Load Fade-Up Animation */
+@keyframes fadeUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Apply the animation to the cards and stagger them */
+.product-card {
+    opacity: 0; /* Start invisible */
+    animation: fadeUp 0.8s ease forwards;
+    overflow: hidden; /* Keeps the zooming image inside the box */
+}
+
+.product-card:nth-child(1) { animation-delay: 0.1s; }
+.product-card:nth-child(2) { animation-delay: 0.2s; }
+.product-card:nth-child(3) { animation-delay: 0.3s; }
+.product-card:nth-child(4) { animation-delay: 0.4s; }
+.product-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* 2. Smooth Image Zoom on Hover */
+.product-img {
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.08);
+}
+
+/* 3. Button Hover Glow Effect */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #FFD700;
+    color: #121212;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
