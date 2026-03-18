@@ -196,3 +196,84 @@ header {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
 }
+/* =========================================
+   PAGE ANIMATIONS (HOME, ABOUT, CONTACT)
+   ========================================= */
+
+/* Hero Section Animation */
+.hero-content {
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.2s;
+}
+
+/* About Page Animations */
+.company-info {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.1s;
+}
+
+.mission-vision .card {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+}
+.mission-vision .card:nth-child(1) { animation-delay: 0.3s; }
+.mission-vision .card:nth-child(2) { animation-delay: 0.5s; }
+
+.team-member {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+}
+.ceo-tier .team-member { animation-delay: 0.2s; }
+.manager-tier .team-member { animation-delay: 0.4s; }
+.staff-tier .team-member:nth-child(1) { animation-delay: 0.6s; }
+.staff-tier .team-member:nth-child(2) { animation-delay: 0.8s; }
+
+/* Contact Page Animations */
+.contact-info {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.contact-form-container {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/* =========================================
+   SNIPCART CUSTOM THEME (DARK MODE + YELLOW)
+   ========================================= */
+
+#snipcart {
+    /* Main Backgrounds */
+    --bgColor-default: #1a1a1a; 
+    --bgColor-alt: #121212;
+    --bgColor-modal: rgba(0, 0, 0, 0.8);
+    
+    /* Text Colors */
+    --color-default: #ffffff;
+    --color-alt: #cccccc;
+    --color-icon: #FFD700;
+    
+    /* Brand Accent Colors (The Yellow) */
+    --color-brand: #FFD700;
+    --color-link: #FFD700;
+    --color-link-hover: #ffffff;
+    
+    /* Primary Buttons (Checkout, Pay, etc.) */
+    --color-buttonPrimary: #FFD700;
+    --color-buttonPrimary-hover: #e6c200;
+    --color-buttonPrimary-text: #121212; /* Dark text on yellow button */
+    
+    /* Borders */
+    --borderColor-default: #333333;
+    
+    /* Input Fields inside Checkout */
+    --bgColor-input: #121212;
+    --color-input: #ffffff;
+    --color-input-hover: #FFD700;
+    --color-input-focus: #FFD700;
+}
