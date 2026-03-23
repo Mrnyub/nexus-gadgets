@@ -130,6 +130,16 @@ header {
 .team-member h3 { margin-bottom: 5px; font-size: 18px; }
 .team-member .role { color: #FFD700; font-size: 14px; text-transform: uppercase; }
 
+/* Team Profile Pictures - SMALLER 60px SIZE */
+.team-img {
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #FFD700; 
+    margin-bottom: 15px;
+}
+
 /* Suppliers */
 .suppliers-section { background-color: #1a1a1a; padding: 30px; border-radius: 10px; border: 1px solid #333; }
 .suppliers-section ul { list-style: none; color: #cccccc; margin-top: 15px; }
@@ -147,6 +157,7 @@ header {
 .contact-form .form-group { margin-bottom: 20px; }
 .contact-form label { display: block; margin-bottom: 8px; color: #cccccc; text-align: left; }
 .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 12px; background-color: #121212; border: 1px solid #333; border-radius: 5px; color: #ffffff; font-size: 16px; }
+
 /* =========================================
    PREMIUM ANIMATIONS & TRANSITIONS
    ========================================= */
@@ -196,6 +207,7 @@ header {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
 }
+
 /* =========================================
    PAGE ANIMATIONS (HOME, ABOUT, CONTACT)
    ========================================= */
@@ -277,6 +289,7 @@ header {
     --color-input-hover: #FFD700;
     --color-input-focus: #FFD700;
 }
+
 /* =========================================
    MOBILE RESPONSIVENESS
    ========================================= */
