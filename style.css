@@ -331,3 +331,12 @@ header {
         flex-direction: column;
     }
 }
+/* Team Profile Pictures - UPDATED SMALLER SIZE */
+.team-img {
+    width: 60px; /* Reduced from 100px */
+    height: 60px; /* Reduced from 100px */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #FFD700; /* Slightly thinner border for scale */
+    margin-bottom: 15px;
+}
