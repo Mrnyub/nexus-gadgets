@@ -52,30 +52,35 @@
             <a href="products.html" class="view-all">View All Products &rarr;</a>
         </div>
         <div class="product-grid">
+            
             <div class="product-card">
-                <div class="product-img-placeholder">[ Product Image ]</div>
+                <img src="https://images.pexels.com/photos/7417547/pexels-photo-7417547.jpeg" alt="Nexus Pro Wireless Earbuds" class="product-img">
                 <h3>Nexus Pro Wireless Earbuds</h3>
                 <p class="price">₱4,500.00</p>
                 <button class="snipcart-add-item add-to-cart-btn"
                   data-item-id="nexus-earbuds-01"
                   data-item-price="4500.00"
-                  data-item-url="/index.html"
+                  data-item-url="https://mrnyub.github.io/nexus-gadgets/index.html"
+                  data-item-image="https://images.pexels.com/photos/7417547/pexels-photo-7417547.jpeg"
                   data-item-name="Nexus Pro Wireless Earbuds">
                   Add to Cart
                 </button>
             </div>
+
             <div class="product-card">
-                <div class="product-img-placeholder">[ Product Image ]</div>
+                <img src="https://images.pexels.com/photos/1334602/pexels-photo-1334602.jpeg" alt="Titanium Smartwatch Series X" class="product-img">
                 <h3>Titanium Smartwatch Series X</h3>
                 <p class="price">₱12,999.00</p>
                 <button class="snipcart-add-item add-to-cart-btn"
                   data-item-id="nexus-watch-x"
                   data-item-price="12999.00"
-                  data-item-url="/index.html"
+                  data-item-url="https://mrnyub.github.io/nexus-gadgets/index.html"
+                  data-item-image="https://images.pexels.com/photos/1334602/pexels-photo-1334602.jpeg"
                   data-item-name="Titanium Smartwatch Series X">
                   Add to Cart
                 </button>
             </div>
+
         </div>
     </section>
 
@@ -90,21 +95,31 @@
         </div>
     </section>
 
-    <section class="reviews">
+<section class="reviews">
         <h2>Customer Feedback</h2>
-        <div class="review-grid">
-            <div class="review-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>"The checkout process was incredibly smooth, and my new phone arrived the next day. Nexus Gadgets is my new go-to."</p>
-                <h4>- Mark D.</h4>
+        
+        <div class="review-grid" id="dynamicReviewGrid">
             </div>
-            <div class="review-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>"Excellent customer service and the gadgets are 100% authentic. Highly recommend their smartwatches!"</p>
-                <h4>- Sarah L.</h4>
+
+      <div class="review-form-container">
+            <h3>Leave a Review</h3>
+            <form id="reviewForm" class="review-form">
+                <input type="text" id="reviewName" placeholder="Your Name" required>
+                <select id="reviewRating" required>
+                    <option value="5">⭐⭐⭐⭐⭐ (5 Stars) - Excellent!</option>
+                    <option value="4">⭐⭐⭐⭐ (4 Stars) - Great</option>
+                    <option value="3">⭐⭐⭐ (3 Stars) - Good</option>
+                    <option value="2">⭐⭐ (2 Stars) - Fair</option>
+                    <option value="1">⭐ (1 Star) - Poor</option>
+                </select>
+                <textarea id="reviewText" rows="3" placeholder="Tell us about your experience..." required></textarea>
+                <button type="submit" class="btn primary-btn">Submit Review</button>
+            </form>
+            
+            <div id="reviewSuccessMessage" style="display: none; color: #4CAF50; text-align: center; margin-top: 15px; font-weight: bold;">
+                You successfully submitted! Thank you for your review.
             </div>
         </div>
-    </section>
 
     <section class="suppliers">
         <p>Authorized Retailer For</p>
