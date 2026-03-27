@@ -90,9 +90,98 @@ header {
     border: none; 
 }
 
-.primary-btn { background-color: #ffffff; color: #121212; }
+.primary-btn { background-color: #FFD700; color: #121212; }
+.primary-btn:hover { background-color: #ffffff; color: #121212; }
 .secondary-btn { background-color: transparent; border: 1px solid #ffffff; color: #ffffff; }
+.secondary-btn:hover { background-color: #ffffff; color: #121212; }
 
+/* =========================================
+   NEW HOMEPAGE SECTIONS (TRACKING, REVIEWS, ETC)
+   ========================================= */
+
+/* General Section Wrapper */
+.featured-products, .order-tracking, .reviews, .suppliers {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Section Headers */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+}
+.view-all { color: #FFD700; text-decoration: none; font-weight: bold; }
+.view-all:hover { color: #ffffff; }
+
+/* Product Add-to-Cart Button */
+.add-to-cart-btn {
+    width: 100%;
+    background-color: transparent;
+    color: #FFD700;
+    border: 1px solid #FFD700;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.add-to-cart-btn:hover { background-color: #FFD700; color: #121212; }
+
+.product-img-placeholder {
+    width: 100%; height: 250px; background-color: #222; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center; color: #555; margin-bottom: 15px;
+}
+
+/* Order Tracking Section */
+.order-tracking { text-align: center; }
+.tracking-box {
+    background-color: #1a1a1a; border: 1px solid #333; padding: 40px;
+    border-radius: 10px; max-width: 600px; margin: 0 auto;
+}
+.tracking-box h2 { color: #FFD700; margin-bottom: 10px; }
+.tracking-box p { color: #ccc; margin-bottom: 25px; }
+.tracking-form { display: flex; gap: 10px; }
+.tracking-form input {
+    flex: 1; padding: 12px 15px; background: #121212; border: 1px solid #333;
+    color: white; border-radius: 5px; font-size: 16px; outline: none;
+}
+.tracking-form input:focus { border-color: #FFD700; }
+
+/* Reviews Section */
+.reviews h2 { text-align: center; margin-bottom: 30px; }
+.review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.review-card { background-color: #1a1a1a; padding: 30px; border-radius: 10px; border: 1px solid #333; }
+.stars { color: #FFD700; margin-bottom: 15px; letter-spacing: 2px; }
+.review-card p { font-style: italic; color: #ccc; margin-bottom: 15px; line-height: 1.6; }
+.review-card h4 { color: #fff; }
+
+/* Suppliers Section */
+.suppliers { text-align: center; border-top: 1px solid #333; padding-top: 40px; }
+.suppliers p { color: #888; text-transform: uppercase; letter-spacing: 2px; font-size: 12px; margin-bottom: 20px; }
+.supplier-logos { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.supplier-logos span { font-size: 24px; font-weight: bold; color: #444; transition: 0.3s; }
+.supplier-logos span:hover { color: #FFD700; }
+
+/* Global Footer */
+footer { background-color: #0a0a0a; border-top: 1px solid #333; padding: 60px 50px 20px; margin-top: 60px; }
+.footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; }
+.footer-column h3 { color: #FFD700; margin-bottom: 20px; font-size: 18px; }
+.footer-column p, .footer-column a { color: #aaa; text-decoration: none; line-height: 1.8; display: block; margin-bottom: 10px; }
+.footer-column ul { list-style: none; }
+.footer-column a:hover { color: #ffffff; }
+.admin-link { color: #FFD700 !important; font-weight: bold; border-bottom: 1px solid #FFD700; display: inline-block; padding-bottom: 2px; }
+.footer-bottom { text-align: center; color: #666; margin-top: 50px; padding-top: 20px; border-top: 1px solid #222; font-size: 14px; }
+
+/* =========================================
+   EXISTING GRIDS & ABOUT PAGES
+   ========================================= */
 /* Products Grid */
 .shop-container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
@@ -104,14 +193,7 @@ header {
 .product-card .price { font-size: 24px; font-weight: bold; margin-bottom: 20px; }
 
 /* Product Image Styling */
-.product-img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #333;
-}
+.product-img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; border: 1px solid #333; transition: transform 0.5s ease; }
 
 /* About Page */
 .about-container { max-width: 1000px; margin: 40px auto; padding: 20px; text-align: center; }
@@ -120,29 +202,6 @@ header {
 .mission-vision { display: flex; gap: 20px; margin-bottom: 60px; }
 .mission-vision .card { background-color: #1a1a1a; padding: 30px; border-radius: 10px; border: 1px solid #333; flex: 1; }
 .mission-vision h2 { color: #FFD700; margin-bottom: 15px; }
-
-/* Team Hierarchy */
-.team-section { margin-bottom: 60px; }
-.hierarchy { display: flex; flex-direction: column; align-items: center; gap: 30px; }
-.tier { display: flex; justify-content: center; gap: 20px; }
-.team-member { background-color: #1a1a1a; padding: 20px 40px; border-radius: 10px; border: 1px solid #333; text-align: center; min-width: 200px; }
-.avatar { font-size: 40px; margin-bottom: 10px; }
-.team-member h3 { margin-bottom: 5px; font-size: 18px; }
-.team-member .role { color: #FFD700; font-size: 14px; text-transform: uppercase; }
-
-/* Team Profile Pictures - SMALLER 60px SIZE */
-.team-img {
-    width: 60px; 
-    height: 60px; 
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #FFD700; 
-    margin-bottom: 15px;
-}
-
-/* Suppliers */
-.suppliers-section { background-color: #1a1a1a; padding: 30px; border-radius: 10px; border: 1px solid #333; }
-.suppliers-section ul { list-style: none; color: #cccccc; margin-top: 15px; }
 
 /* Contact Page */
 .contact-container { max-width: 1000px; margin: 40px auto; padding: 20px; }
@@ -158,132 +217,41 @@ header {
 .contact-form label { display: block; margin-bottom: 8px; color: #cccccc; text-align: left; }
 .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 12px; background-color: #121212; border: 1px solid #333; border-radius: 5px; color: #ffffff; font-size: 16px; }
 
+
 /* =========================================
    PREMIUM ANIMATIONS & TRANSITIONS
    ========================================= */
-
-/* 1. Page Load Fade-Up Animation */
 @keyframes fadeUp {
-    from { 
-        opacity: 0; 
-        transform: translateY(30px); 
-    }
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Apply the animation to the cards and stagger them */
-.product-card {
-    opacity: 0; /* Start invisible */
-    animation: fadeUp 0.8s ease forwards;
-    overflow: hidden; /* Keeps the zooming image inside the box */
-}
-
+.product-card { opacity: 0; animation: fadeUp 0.8s ease forwards; overflow: hidden; }
 .product-card:nth-child(1) { animation-delay: 0.1s; }
 .product-card:nth-child(2) { animation-delay: 0.2s; }
 .product-card:nth-child(3) { animation-delay: 0.3s; }
-.product-card:nth-child(4) { animation-delay: 0.4s; }
-.product-card:nth-child(5) { animation-delay: 0.5s; }
 
-/* 2. Smooth Image Zoom on Hover */
-.product-img {
-    transition: transform 0.5s ease;
-}
+.product-card:hover .product-img { transform: scale(1.08); }
 
-.product-card:hover .product-img {
-    transform: scale(1.08);
-}
-
-/* 3. Button Hover Glow Effect */
-.btn {
-    transition: all 0.3s ease;
-}
-
-.primary-btn:hover {
-    background-color: #FFD700;
-    color: #121212;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-}
-
-/* =========================================
-   PAGE ANIMATIONS (HOME, ABOUT, CONTACT)
-   ========================================= */
-
-/* Hero Section Animation */
-.hero-content {
-    opacity: 0;
-    animation: fadeUp 1s ease forwards;
-    animation-delay: 0.2s;
-}
-
-/* About Page Animations */
-.company-info {
-    opacity: 0;
-    animation: fadeUp 0.8s ease forwards;
-    animation-delay: 0.1s;
-}
-
-.mission-vision .card {
-    opacity: 0;
-    animation: fadeUp 0.8s ease forwards;
-}
-.mission-vision .card:nth-child(1) { animation-delay: 0.3s; }
-.mission-vision .card:nth-child(2) { animation-delay: 0.5s; }
-
-.team-member {
-    opacity: 0;
-    animation: fadeUp 0.8s ease forwards;
-}
-.ceo-tier .team-member { animation-delay: 0.2s; }
-.manager-tier .team-member { animation-delay: 0.4s; }
-.staff-tier .team-member:nth-child(1) { animation-delay: 0.6s; }
-.staff-tier .team-member:nth-child(2) { animation-delay: 0.8s; }
-
-/* Contact Page Animations */
-.contact-info {
-    opacity: 0;
-    animation: fadeUp 0.8s ease forwards;
-    animation-delay: 0.2s;
-}
-
-.contact-form-container {
-    opacity: 0;
-    animation: fadeUp 0.8s ease forwards;
-    animation-delay: 0.4s;
-}
+.hero-content { opacity: 0; animation: fadeUp 1s ease forwards; animation-delay: 0.2s; }
 
 /* =========================================
    SNIPCART CUSTOM THEME (DARK MODE + YELLOW)
    ========================================= */
-
 #snipcart {
-    /* Main Backgrounds */
     --bgColor-default: #1a1a1a; 
     --bgColor-alt: #121212;
     --bgColor-modal: rgba(0, 0, 0, 0.8);
-    
-    /* Text Colors */
     --color-default: #ffffff;
     --color-alt: #cccccc;
     --color-icon: #FFD700;
-    
-    /* Brand Accent Colors (The Yellow) */
     --color-brand: #FFD700;
     --color-link: #FFD700;
     --color-link-hover: #ffffff;
-    
-    /* Primary Buttons (Checkout, Pay, etc.) */
     --color-buttonPrimary: #FFD700;
     --color-buttonPrimary-hover: #e6c200;
-    --color-buttonPrimary-text: #121212; /* Dark text on yellow button */
-    
-    /* Borders */
+    --color-buttonPrimary-text: #121212;
     --borderColor-default: #333333;
-    
-    /* Input Fields inside Checkout */
     --bgColor-input: #121212;
     --color-input: #ffffff;
     --color-input-hover: #FFD700;
@@ -294,53 +262,21 @@ header {
    MOBILE RESPONSIVENESS
    ========================================= */
 @media (max-width: 768px) {
-    /* Stack the Header & Navigation */
-    header {
-        flex-direction: column;
-        padding: 20px;
-        gap: 15px;
-        text-align: center;
-    }
+    header { flex-direction: column; padding: 20px; gap: 15px; text-align: center; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
     
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    /* Shrink the Hero Text */
-    .hero-content h1 {
-        font-size: 32px;
-    }
+    .hero-content h1 { font-size: 32px; }
+    .cta-buttons { display: flex; flex-direction: column; gap: 15px; }
+    .btn { margin: 0; }
     
-    .hero-content p {
-        font-size: 16px;
-    }
-
-    /* Stack Homepage Buttons */
-    .cta-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
+    /* Fix Tracking Form for Mobile */
+    .tracking-form { flex-direction: column; }
+    .tracking-form button { padding: 12px; }
     
-    .btn {
-        margin: 0;
-    }
+    /* Fix Footer for Mobile */
+    footer { padding: 40px 20px 20px; }
+    .footer-content { text-align: center; }
 
-    /* Keep Search Bar inside the screen */
-    .search-container input {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    /* Stack About Page Cards */
-    .mission-vision {
-        flex-direction: column;
-    }
-
-    /* Stack Contact Page Boxes */
-    .contact-wrapper {
-        flex-direction: column;
-    }
+    .mission-vision { flex-direction: column; }
+    .contact-wrapper { flex-direction: column; }
 }
