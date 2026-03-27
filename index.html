@@ -14,13 +14,13 @@
 
     <header>
         <div class="logo" style="display: flex; align-items: center; gap: 10px;">
-    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-        <polyline points="2 17 12 22 22 17"></polyline>
-        <polyline points="2 12 12 17 22 12"></polyline>
-    </svg>
-    Nexus Gadgets
-</div>
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            Nexus Gadgets
+        </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -46,8 +46,119 @@
         </div>
     </main>
 
+    <section class="featured-products">
+        <div class="section-header">
+            <h2>Trending Tech</h2>
+            <a href="products.html" class="view-all">View All Products &rarr;</a>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img-placeholder">[ Product Image ]</div>
+                <h3>Nexus Pro Wireless Earbuds</h3>
+                <p class="price">₱4,500.00</p>
+                <button class="snipcart-add-item add-to-cart-btn"
+                  data-item-id="nexus-earbuds-01"
+                  data-item-price="4500.00"
+                  data-item-url="/index.html"
+                  data-item-name="Nexus Pro Wireless Earbuds">
+                  Add to Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <div class="product-img-placeholder">[ Product Image ]</div>
+                <h3>Titanium Smartwatch Series X</h3>
+                <p class="price">₱12,999.00</p>
+                <button class="snipcart-add-item add-to-cart-btn"
+                  data-item-id="nexus-watch-x"
+                  data-item-price="12999.00"
+                  data-item-url="/index.html"
+                  data-item-name="Titanium Smartwatch Series X">
+                  Add to Cart
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="order-tracking">
+        <div class="tracking-box">
+            <h2>Track Your Package</h2>
+            <p>Enter your tracking number below for real-time delivery updates.</p>
+            <form id="trackingForm" class="tracking-form">
+                <input type="text" placeholder="e.g., NEX-987654321" required>
+                <button type="submit" class="btn primary-btn">Track Order</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <h2>Customer Feedback</h2>
+        <div class="review-grid">
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"The checkout process was incredibly smooth, and my new phone arrived the next day. Nexus Gadgets is my new go-to."</p>
+                <h4>- Mark D.</h4>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Excellent customer service and the gadgets are 100% authentic. Highly recommend their smartwatches!"</p>
+                <h4>- Sarah L.</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="suppliers">
+        <p>Authorized Retailer For</p>
+        <div class="supplier-logos">
+            <span>[ Apple ]</span>
+            <span>[ Samsung ]</span>
+            <span>[ Sony ]</span>
+            <span>[ Asus ]</span>
+            <span>[ Garmin ]</span>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="logo" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                    NEXUS GADGETS
+                </div>
+                <p>Engineering Your Digital Lifestyle.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: support@nexusgadgets.ph</p>
+                <p>Phone: +63 917 123 4567</p>
+                <p>Cebu City, Philippines</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About the Company & Owners</a></li>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="contact.html">Customer Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Staff Portal</h3>
+                <a href="inventory.html" class="admin-link">Inventory & Order Management &rarr;</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nexus Gadgets. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script async src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js"></script>
-    <div hidden id="snipcart" data-api-key="ODQwMzdhNmEtYWU3Ny00MjI5LTlhM2MtNGY4MDAyZmQyNzFiNjM5MDkyNjI5MzI3NDUwMDEy"></div>
+    <div hidden id="snipcart" data-api-key="ODQwMzdhNmEtYWU3Ny00MjI5LTlhM2MtNGY4MDAyZmQyNzFiNjM5MDkyNjI5MzI3NDUwMDEy" data-currency="php"></div>
     <script src="script.js"></script>
 </body>
 </html>
