@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Admin | Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-body">
+
+    <div id="loginOverlay" class="login-overlay">
+        <div class="login-box">
+            <div class="logo" style="margin-bottom: 20px; color: #FFD700; font-size: 24px; font-weight: bold;">
+                <i class="fa-solid fa-lock"></i> Nexus Staff Portal
+            </div>
+            <p>Please enter your access PIN to continue.</p>
+            <input type="password" id="adminPin" placeholder="Enter PIN (2026)">
+            <button onclick="checkPin()" class="btn primary-btn" style="width: 100%; margin-top: 15px;">Secure Login</button>
+            <p id="loginError" style="color: #F44336; font-size: 12px; margin-top: 10px; display: none;">Access Denied. Incorrect PIN.</p>
+        </div>
+    </div>
+
+    <div class="admin-container">
+        
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <i class="fa-solid fa-microchip" style="color: #FFD700;"></i> NEXUS ADMIN
+            </div>
+            <ul class="admin-nav">
+                <li><a href="#" id="nav-inventory" class="active" onclick="switchTab('inventory')"><i class="fa-solid fa-boxes-stacked"></i> Inventory</a></li>
+                <li><a href="#" id="nav-orders" onclick="switchTab('orders')"><i class="fa-solid fa-truck-fast"></i> Active Orders</a></li>
+                <li><a href="#" id="nav-analytics" onclick="switchTab('analytics')"><i class="fa-solid fa-chart-line"></i> Analytics</a></li>
+                <li><a href="index.html"><i class="fa-solid fa-store"></i> Return to Store</a></li>
+                <li><a href="#" onclick="logout()" style="color: #F44336; margin-top: 20px;"><i class="fa-solid fa-right-from-bracket"></i> Lock Portal</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-header">
+                <h2 id="dashboardTitle">Inventory Management</h2>
+                <div class="admin-user">
+                    <span>Welcome, System Admin</span>
+                </div>
+            </header>
+
+            <div id="view-inventory" class="dashboard-view">
+                <div class="stats-grid">
+                    <div class="stat-card"><h3>Total Products</h3><p class="stat-number" id="totalProductsStat">0</p></div>
+                    <div class="stat-card warning"><h3>Low Stock Alerts</h3><p class="stat-number" id="lowStockStat">0</p></div>
+                    <div class="stat-card"><h3>Total Inventory Value</h3><p class="stat-number" id="valueStat">₱0</p></div>
+                </div>
+                <section class="inventory-section">
+                    <div class="table-header">
+                        <h3>Current Stock Levels</h3>
+                        <button class="btn primary-btn" onclick="addNewProduct()" style="padding: 8px 15px; font-size: 14px;">+ Add Product</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="inventory-table">
+                            <thead>
+                                <tr><th>Item ID</th><th>Product Name</th><th>Price</th><th>Stock</th><th>Status</th><th>Actions</th></tr>
+                            </thead>
+                            <tbody id="inventoryTableBody"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <div id="view-orders" class="dashboard-view" style="display: none;">
+                <div class="stats-grid">
+                    <div class="stat-card warning"><h3>Pending Orders</h3><p class="stat-number" id="pendingOrdersStat">0</p></div>
+                    <div class="stat-card"><h3>Shipped Today</h3><p class="stat-number">2</p></div>
+                </div>
+                <section class="inventory-section">
+                    <div class="table-header">
+                        <h3>Recent Transactions</h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="inventory-table">
+                            <thead>
+                                <tr><th>Order #</th><th>Customer Name</th><th>Date</th><th>Total</th><th>Status</th><th>Action</th></tr>
+                            </thead>
+                            <tbody id="ordersTableBody"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <div id="view-analytics" class="dashboard-view" style="display: none;">
+                <div class="stats-grid">
+                    <div class="stat-card" style="border-top-color: #2196F3;"><h3>Monthly Revenue</h3><p class="stat-number">₱245,000</p></div>
+                    <div class="stat-card" style="border-top-color: #9C27B0;"><h3>Top Selling Item</h3><p class="stat-number" style="font-size: 20px; padding-top:10px;">Nexus Omni Core</p></div>
+                    <div class="stat-card" style="border-top-color: #00BCD4;"><h3>Site Visitors (30d)</h3><p class="stat-number">12,450</p></div>
+                </div>
+                <section class="inventory-section" style="text-align: center; padding: 50px;">
+                    <i class="fa-solid fa-chart-pie" style="font-size: 60px; color: #FFD700; margin-bottom: 20px;"></i>
+                    <h3 style="color: white; margin-bottom: 10px;">Advanced Analytics Dashboard</h3>
+                    <p style="color: #888;">Live sales tracking and conversion metrics are active and logging in the background. Connect your Shopify or Snipcart API to visualize real-time charts here.</p>
+                </section>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
